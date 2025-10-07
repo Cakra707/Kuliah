@@ -44,4 +44,5 @@ main() {
     cout << abs(durasimenit) << " menit" << endl;
     cout << abs(durasiDetik) << " detik" << endl;
     
+    return 0;
 }
