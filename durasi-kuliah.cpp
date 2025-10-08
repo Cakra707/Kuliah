@@ -16,7 +16,7 @@ main() {
         cout << "Detik  : ";
         cin >> detikMulai;
 
-    cout << "Masukan Waktu Selesai Kuliah" << endl;
+    cout << "\nMasukan Waktu Selesai Kuliah" << endl;
         cout << "Jam    : ";
         cin >> jamSelesai;
 
@@ -30,7 +30,7 @@ main() {
 
     totalDetikSelesai = (jamSelesai * 3600) + (menitSelesai * 60) + detikSelesai;
 
-    totalDurasi = totalDetikMulai - totalDetikSelesai;
+    totalDurasi = totalDetikSelesai - totalDetikMulai;
 
     durasiJam = totalDurasi / 3600;
     totalDurasi %= 3600;
@@ -39,10 +39,10 @@ main() {
     durasiDetik = totalDurasi;
 
     cout << "---------------------------------" << endl;
-    cout << "Durasi Waktu Perkuliahan adalah : " << endl;
-    cout << abs(durasiJam )<< " jam" << endl;
-    cout << abs(durasimenit) << " menit" << endl;
-    cout << abs(durasiDetik) << " detik" << endl;
+    cout << "\nDurasi Waktu Perkuliahan adalah : " << endl;
+    cout << durasiJam << " jam" << endl;
+    cout << durasimenit << " menit" << endl;
+    cout << durasiDetik << " detik" << endl;
     
     return 0;
 }

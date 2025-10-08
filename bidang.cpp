@@ -7,13 +7,13 @@ int luasBidang1, luasBidang2, kelilingBidang1, kelilingBidang2, luasTotalBidang,
 
 main() {
 
-    cout << "Masukan Biaya Pemasangan Pondasi per m :" ;
+    cout << "Masukan Biaya Pemasangan Pondasi per m         : " ;
     cin >> biayaPondasiperM;
 
-    cout << "Masukan Biaya Pemasangan Pagar per m   :" ;
+    cout << "Masukan Biaya Pemasangan Pagar per m           : " ;
     cin >> biayaPagarPerM;
 
-    cout << "Masukan Biaya Pemasangan Paving Block per m2 :" ;
+    cout << "Masukan Biaya Pemasangan Paving Block per m2   : " ;
     cin >> biayaPavingPerM2;
 
     luasBidang1 = 50 * 40;
@@ -32,13 +32,12 @@ main() {
     biayaPagarPerM *= kelilingTotalgBidang;
     biayaPondasiperM *= kelilingTotalgBidang;
 
-    cout << "Luas Total Bidang adalah " << luasTotalBidang << " m" <<endl;
+    cout << "\nLuas Total Bidang adalah " << luasTotalBidang << " m" <<endl;
     cout << "Luas Total Keliling Bidang adalah " << kelilingTotalgBidang << " m" <<endl;
     cout << "Luas Sisa Bidang adalah " << luasSisaBidang << " m" <<endl;
-    cout << "Biaya Pemasangan Pagar per meter adalah Rp" << biayaPagarPerM <<endl;
 
+    cout << "\nBiaya Pemasangan Pagar per meter adalah Rp" << biayaPagarPerM <<endl;
     cout << "Biaya Pemasangan Pondasi per meter adalah Rp" << biayaPondasiperM << endl;
-
     cout << "Biaya Pemasangan Paving Block per m2 adalah Rp" <<biayaPavingPerM2 << endl;
 
    

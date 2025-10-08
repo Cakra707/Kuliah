@@ -16,8 +16,8 @@ main() {
     sisaSiswa = sisaDariBus % 7;
     siswaDiMinibus = sisaDariBus - sisaSiswa;
 
-    cout << "Jumlah Bus yang digunakan adalah " << bus << " bus ( " << siswaDiBus << " siswa )" <<endl; 
-    cout << "Jumlah minibus yang digunakan adalah " << minibus << " minibus ( " << siswaDiMinibus << " siswa )" <<endl;
+    cout << "\nJumlah Bus yang digunakan adalah " << bus << " bus -> ( " << siswaDiBus << " siswa )" <<endl; 
+    cout << "Jumlah minibus yang digunakan adalah " << minibus << " minibus -> ( " << siswaDiMinibus << " siswa )" <<endl;
      cout << "Jumlah siswa yang tidak kebagian tempat adalah " << sisaSiswa << " siswa ";
      
      return 0;

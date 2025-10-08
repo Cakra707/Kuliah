@@ -20,7 +20,7 @@ main() {
     
     nilaiAkhir = (nilaiKeaktifan * 0.20) + (nilaiTugas * 0.30) + (nilaiUjian * 0.50);
     
-    cout << "Nilai Akhir " << namaSiswa << " adalah : " << nilaiAkhir;
+    cout << "\nNilai Akhir " << namaSiswa << " adalah     : " << nilaiAkhir;
 
     return 0;
 }
