@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-float diameterSumur, luasSisaBidang;
+float luasSumur, luasSisaTanah;
 
-int luasBidang1, luasBidang2, kelilingBidang1, kelilingBidang2, luasTotalBidang, kelilingTotalgBidang, luasRumah, biayaPondasiperM, biayaPagarPerM, biayaPavingPerM2;
+int luasBidang1, luasBidang2, kelilingBidang1, kelilingBidang2, luasTotalTanah, kelilingTotalTanah, luasRumah, biayaPondasiperM, biayaPagarPerM, biayaPavingPerM2;
 
 main() {
 
@@ -18,28 +18,31 @@ main() {
 
     luasBidang1 = 50 * 40;
     luasBidang2 = 30 * 20;
-    luasTotalBidang = luasBidang1 + luasBidang2;
+    luasTotalTanah = luasBidang1 + luasBidang2;
     
     kelilingBidang1 = 2 *(50 + 40);
     kelilingBidang2 = 2 *(30 + 20);
-    kelilingTotalgBidang = kelilingBidang1 + kelilingBidang2;
+    kelilingTotalTanah = kelilingBidang1 + kelilingBidang2;
 
     luasRumah = 15 * 10;
-    diameterSumur = 1.5;
-    luasSisaBidang = luasTotalBidang - (luasRumah + diameterSumur);
+    luasSumur = 3.14 * 0.75 * 0.75;
+    luasSisaTanah = luasTotalTanah - (luasRumah + luasSumur);
 
-    biayaPavingPerM2 *= luasSisaBidang;
-    biayaPagarPerM *= kelilingTotalgBidang;
-    biayaPondasiperM *= kelilingTotalgBidang;
+    biayaPavingPerM2 *= luasSisaTanah;
+    biayaPagarPerM *= kelilingTotalTanah;
+    biayaPondasiperM *= kelilingTotalTanah;
 
-    cout << "\nLuas Total Bidang adalah " << luasTotalBidang << " m" <<endl;
-    cout << "Luas Total Keliling Bidang adalah " << kelilingTotalgBidang << " m" <<endl;
-    cout << "Luas Sisa Bidang adalah " << luasSisaBidang << " m" <<endl;
+    cout << "\nLuas Total Tanah adalah " << luasTotalTanah << " m2" <<endl;
+    cout << "Luas Total Keliling Tanah adalah " << kelilingTotalTanah << " m" <<endl;
+    cout << "Luas Rumah adalah " << luasRumah << " m2" <<endl;
+    cout << "Luas Sumur adalah " << luasSumur << " m2" <<endl;
+    cout << "Luas Sisa Tanah adalah " << luasSisaTanah << " m2" <<endl;
 
     cout << "\nBiaya Pemasangan Pagar per meter adalah Rp" << biayaPagarPerM <<endl;
     cout << "Biaya Pemasangan Pondasi per meter adalah Rp" << biayaPondasiperM << endl;
-    cout << "Biaya Pemasangan Paving Block per m2 adalah Rp" <<biayaPavingPerM2 << endl;
+    cout << "Biaya Pemasangan Paving Block per m2 adalah Rp" << biayaPavingPerM2 << endl;
 
+    cout << "\nTotal Biaya Keseluruhan adalah Rp" << biayaPagarPerM + biayaPondasiperM + biayaPavingPerM2 << endl;
    
     return 0;
 }

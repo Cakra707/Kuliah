@@ -2,6 +2,7 @@
 using namespace std;
 
 string namaSiswa;
+
 int nilaiKeaktifan, nilaiTugas, nilaiUjian, nilaiAkhir;
 
 main() {
@@ -18,7 +19,7 @@ main() {
     cout << "Masukan Nilai Ujian      : ";
     cin >> nilaiUjian;
     
-    nilaiAkhir = (nilaiKeaktifan * 0.20) + (nilaiTugas * 0.30) + (nilaiUjian * 0.50);
+    nilaiAkhir = (nilaiKeaktifan * 0.2) + (nilaiTugas * 0.3) + (nilaiUjian * 0.5);
     
     cout << "\nNilai Akhir " << namaSiswa << " adalah     : " << nilaiAkhir;
 
