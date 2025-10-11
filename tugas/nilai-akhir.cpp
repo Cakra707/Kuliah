@@ -1,3 +1,4 @@
+//program untuk menghitung nilai akhir seorang siswa
 #include <iostream>
 using namespace std;
 

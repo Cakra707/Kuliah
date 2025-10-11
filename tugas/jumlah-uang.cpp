@@ -1,3 +1,4 @@
+//program untuk menghitung banyak lembaran atau kepingan sejumlah uang
 #include <iostream>
 using namespace std;
 
