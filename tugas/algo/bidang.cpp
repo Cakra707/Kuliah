@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-float luasSumur, luasSisaTanah;
+float luasSumur, luasSisaTanah, phi;
 
 int luasBidang1, luasBidang2, kelilingBidang1, kelilingBidang2, luasTotalTanah, kelilingTotalTanah, luasRumah, biayaPondasiperM, biayaPagarPerM, biayaPavingPerM2, totalBiayaPaving, totalBiayaPagar, totalBiayaPondasi;
 
@@ -23,7 +23,8 @@ main() {
     kelilingTotalTanah = kelilingBidang1 + kelilingBidang2;
 
     luasRumah = 15 * 10;
-    luasSumur = 3.14 * 0.75 * 0.75;
+    phi = 3.14;
+    luasSumur = phi * (1.5 / 2) * (1.5 / 2);
     luasSisaTanah = luasTotalTanah - (luasRumah + luasSumur);
 
     totalBiayaPondasi = biayaPondasiperM * kelilingTotalTanah;
@@ -31,7 +32,7 @@ main() {
     totalBiayaPaving = biayaPavingPerM2 * luasSisaTanah;
 
     cout << "\nLuas Total Tanah adalah " << luasTotalTanah << " m2" <<endl;
-    cout << "Luas Total Keliling Tanah adalah " << kelilingTotalTanah << " m" <<endl;
+    cout << "Total Keliling Tanah adalah " << kelilingTotalTanah << " m" <<endl;
     cout << "Luas Rumah adalah " << luasRumah << " m2" <<endl;
     cout << "Luas Sumur adalah " << luasSumur << " m2" <<endl;
     cout << "Luas Sisa Tanah adalah " << luasSisaTanah << " m2" <<endl;
