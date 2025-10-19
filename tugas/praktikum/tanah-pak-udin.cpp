@@ -2,40 +2,36 @@
 #include <iomanip>
 using namespace std;
 
-int biayaBuatKolamPerM, biayaPasangKeramikPerM, biayaTanamRumputPerM, biayaKolam, biayaKeramik, biayaRumput, totalBiaya;
-float luasTanah, luasKolam, luasDipasangKeramik, luasDitanamRumput;
+double luasTanah, luasKolam, luasDipasangKeramik, luasDitanamRumput, biayaBuatKolamPerM, biayaPasangKeramikPerM, biayaTanamRumputPerM, biayaKolam, biayaKeramik, biayaRumput, totalBiaya;
 
-main () {
+int main () {
 
-    cout << "Masukan Luas Tanah                             : "; cin >> luasTanah;
-    cout << "Masukan Biaya Pembuatan Kolam Ikan per meter   : "; cin >> biayaBuatKolamPerM;
-    cout << "Masukan Biaya Pemasangan Keramik per meter     : "; cin >> biayaPasangKeramikPerM;
-    cout << "Masukan Biaya Penanaman Rumput per meter       : "; cin >> biayaTanamRumputPerM;
+    cout << "Masukan Luas Tanah                         : ";    cin >> luasTanah;
+    cout << "Masukan Biaya Pembuatan Kolam Ikan per m2  : Rp  "; cin >> biayaBuatKolamPerM;
+    cout << "Masukan Biaya Pemasangan Keramik per m2    : Rp  "; cin >> biayaPasangKeramikPerM;
+    cout << "Masukan Biaya Penanaman Rumput per m2      : Rp  "; cin >> biayaTanamRumputPerM;
 
     luasKolam = luasTanah * 0.25;
     luasDipasangKeramik = luasTanah * 0.4;
     luasDitanamRumput = luasTanah - (luasKolam + luasDipasangKeramik);
-
     biayaKolam = luasKolam * biayaBuatKolamPerM;
     biayaKeramik = luasDipasangKeramik * biayaPasangKeramikPerM;
     biayaRumput = luasDitanamRumput * biayaTanamRumputPerM;
-
     totalBiaya = biayaKolam + biayaRumput + biayaKeramik;
 
-    cout << "\nHASIL PERHITUNGAN" <<endl;
-
+    cout << fixed << setprecision(2);
     cout <<"\n";
-    cout << setiosflags(ios::right);
-    cout << setw(24) << "Luas Tanah     :   " << setw(10) << luasTanah <<endl;
-    cout << setw(24) << "Luas Kolam     :   " << setw(10) << luasKolam <<endl;
-    cout << setw(24) << "Luas Keramik   :   " << setw(10) << luasDipasangKeramik <<endl;
-    cout << setw(24) << "Luas Rumput    :   " << setw(10) << luasDitanamRumput <<endl;
-    cout << setw(24) << "Biaya Kolam    : Rp"  << setw(10) << biayaKolam <<endl;
-    cout << setw(24) << "Biaya Keramik  : Rp"  << setw(10) << biayaKeramik <<endl;
-    cout << setw(24) << "Biaya Rumput   : Rp"  << setw(10) << biayaRumput <<endl;
-
-    cout << "\n";
-    cout << setw(24) << "Total Biaya    :   "  << setw(10) << totalBiaya;
+    cout << setw(36) <<"HASIL PERHITUNGAN TANAH" <<endl <<endl;
+    cout << "Luas Tanah             :   " << setw(20) << luasTanah <<" m2" <<endl;
+    cout << "Luas Kolam Ikan        :   " << setw(20) << luasKolam <<" m2" <<endl;
+    cout << "Luas Pasang Keramik    :   " << setw(20) << luasDipasangKeramik <<" m2" <<endl;
+    cout << "Luas Tanam Rumput      :   " << setw(20) << luasDitanamRumput <<" m2" <<endl <<endl <<endl;
+    
+    cout << setw(35) << "HASIL PERHITUNGAN BIAYA" <<endl <<endl;
+    cout << "Biaya Buat Kolam Ikan  : Rp"  << setw(20) << biayaKolam <<endl;
+    cout << "Biaya Pasang Keramik   : Rp"  << setw(20) << biayaKeramik <<endl;
+    cout << "Biaya Tanam Rumput     : Rp"  << setw(20) << biayaRumput <<endl << endl;
+    cout << "Total Seluruh Biaya    : Rp"  << setw(20) << totalBiaya;
 
     return 0;
 
