@@ -7,24 +7,27 @@ int hargaAlat, ongkosKerja, pajakPPn, totalPembayaran;
 
 main () {
     
-    cout <<"Masukan Harga Alat       : "; cin >> hargaAlat;
-    cout <<"Masukan Ongkos Kerja     : "; cin >> ongkosKerja;
-    system("cls");
-
+    cout <<"Masukan Harga Alat       : Rp "; cin >> hargaAlat;
+    cout <<"Masukan Ongkos Kerja     : Rp "; cin >> ongkosKerja;
+   
     pajakPPn = (hargaAlat + ongkosKerja ) * 0.1;
     totalPembayaran = hargaAlat + ongkosKerja + pajakPPn;
-
-    cout <<"\nBENGKEL MOBIL MAJU MUNDUR" << endl;
-    cout <<"NOTA PEMBAYARAN" << endl;
+    system("cls");
 
     cout <<"\n";
-    cout << setiosflags(ios::right);
-    cout << setw(24) <<"Harga Alat       : " << setw(10) << "Rp" << hargaAlat << endl;
-    cout << setw(24) <<"Ongkos Kerja     : " << setw(10) << "Rp" << ongkosKerja << endl;
-    cout << setw(24) <<"Pajak PPn(10%)   : " << setw(10) << "Rp" << pajakPPn << endl;
-    cout << setw(24) <<"Total Pembayaran : " << setw(10) << "Rp" << totalPembayaran << endl;
+    cout << setw(35) <<"BENGKEL MOBIL MAJU MUNDUR"<< endl;
+    cout << setw(30) <<"NOTA PEMBAYARAN" << endl;
+    cout << "----------------------------------------------" <<endl;
 
-    cout << "\nTerima Kasih Atas Kunjungan Anda" <<endl;
+    cout <<"\n";
+    cout <<"Harga Alat              : Rp " << setw(15) << hargaAlat << endl;
+    cout <<"Ongkos Kerja            : Rp " << setw(15) << ongkosKerja << endl;
+    cout <<"Pajak PPn(10%)          : Rp " << setw(15) << pajakPPn << endl;
+    cout <<"Total Pembayaran        : Rp " << setw(15) << totalPembayaran << endl;
+    cout <<"\n";
+
+    cout << "----------------------------------------------" <<endl;
+    cout << setw(39) <<"Terima Kasih Atas Kunjungan Anda" << endl;
 
     return 0;
 }
