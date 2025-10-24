@@ -34,5 +34,4 @@ int main () {
     cout << "Total Seluruh Biaya    : Rp"  << setw(20) << totalBiaya;
 
     return 0;
-
 }

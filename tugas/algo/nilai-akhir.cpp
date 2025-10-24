@@ -4,7 +4,7 @@ using namespace std;
 
 string namaSiswa;
 
-int nilaiKeaktifan, nilaiTugas, nilaiUjian, nilaiAkhir;
+double nilaiKeaktifan, nilaiTugas, nilaiUjian, nilaiAkhir;
 
 main() {
     
