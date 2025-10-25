@@ -55,16 +55,16 @@ int main () {
    cout << setw(34) <<"HASIL PERHITUNGAN GAJI" <<endl <<endl;
 
    cout << fixed << setprecision(2);
-   cout << "Gaji Pokok                         : Rp" << gajiPokok << endl;
-   cout << "Tunjangan Keluarga                 : Rp" << tunjanganKeluarga << endl;
-   cout << "Tunjangan Jabatan                  : Rp" << tunjanganJabatan << endl;
-   cout << "Tunjangan pendidikan               : Rp" << tunjanganPendidikan << endl;
-   cout << "Tunjangan Anak                     : Rp" << tunjanganAnak << endl;
-   cout << "Tambahan Gaji                      : Rp" << tambahanGaji << endl;
-   cout << "Potongan Gaji                      : Rp" << potonganGaji << endl;
-   cout << "Pajak                              : Rp" << pajak << endl;
-   cout << "Gaji Kotor                         : Rp" << gajiKotor << endl;
-   cout << "Gaji Bersih                        : Rp" << gajiBersih << endl;
+   cout << "Gaji Pokok                         : Rp" << setw(15) << gajiPokok << endl;
+   cout << "Tunjangan Keluarga                 : Rp" << setw(15) << tunjanganKeluarga << endl;
+   cout << "Tunjangan Jabatan                  : Rp" << setw(15) << tunjanganJabatan << endl;
+   cout << "Tunjangan pendidikan               : Rp" << setw(15) << tunjanganPendidikan << endl;
+   cout << "Tunjangan Anak                     : Rp" << setw(15) << tunjanganAnak << endl;
+   cout << "Tambahan Gaji                      : Rp" << setw(15) << tambahanGaji << endl;
+   cout << "Potongan Gaji                      : Rp" << setw(15) << potonganGaji << endl;
+   cout << "Pajak                              : Rp" << setw(15) << pajak << endl;
+   cout << "Gaji Kotor                         : Rp" << setw(15) << gajiKotor << endl;
+   cout << "Gaji Bersih                        : Rp" << setw(15) << gajiBersih << endl;
 
    return 0;
 }
