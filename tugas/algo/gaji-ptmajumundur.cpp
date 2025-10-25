@@ -9,15 +9,15 @@ char kodeJabatan;
 
 int main () {
 
-    cout << "DATA DIRI ANDA" <<endl <<endl;
+    cout << setw(30) << "DATA DIRI ANDA" <<endl <<endl;
     cout << "NIK                                : "; cin >> nik;
     cout << "Nama                               : "; cin.ignore(); getline(cin, namaKaryawan);
     cout << "Kode Jabatan (S/T/B)               : "; cin >> kodeJabatan;
     cout << "Tingkat Pendidikan (SMA/D3/S1)     : "; cin >> tingkatPendidikan;
-    cout << "Status Perkawinan (MENIKAH/BELUM)  :"; cin >> status;
+    cout << "Status Perkawinan (MENIKAH/BELUM)  : "; cin >> status;
 
     if (status == "MENIKAH") {
-        cout << "Jumlah anak                    : "; cin >> jumlahAnak;
+        cout << "Jumlah anak                        : "; cin >> jumlahAnak;
         tunjanganKeluarga = 0.1 * gajiPokok;
     }
 
@@ -51,19 +51,20 @@ int main () {
    tunjanganAnak = 0.05 *  gajiPokok * jumlahAnak;
    gajiBersih = gajiKotor - pajak;
 
-   cout << "\nHASIL PERHITUNGAN GAJI" <<endl <<endl;
+   cout << "\n" <<endl;
+   cout << setw(34) <<"HASIL PERHITUNGAN GAJI" <<endl <<endl;
 
    cout << fixed << setprecision(2);
-   cout << "Gaji Pokok                         : " << gajiPokok << endl;
-   cout << "Tunjangan Keluarga                 : " << tunjanganKeluarga << endl;
-   cout << "Tunjangan Jabatan                  : " << tunjanganJabatan << endl;
-   cout << "Tunjangan pendidikan               : " << tunjanganPendidikan << endl;
-   cout << "Tunjangan Anak                     : " << tunjanganAnak << endl;
-   cout << "Tambahan Gaji                      : " << tambahanGaji << endl;
-   cout << "Potongan Gaji                      : " << potonganGaji << endl;
-   cout << "Pajak                              : " << pajak << endl;
-   cout << "Gaji Kotor                         : " << gajiKotor << endl;
-   cout << "Gaji Bersih                        : " << gajiBersih << endl;
+   cout << "Gaji Pokok                         : Rp" << gajiPokok << endl;
+   cout << "Tunjangan Keluarga                 : Rp" << tunjanganKeluarga << endl;
+   cout << "Tunjangan Jabatan                  : Rp" << tunjanganJabatan << endl;
+   cout << "Tunjangan pendidikan               : Rp" << tunjanganPendidikan << endl;
+   cout << "Tunjangan Anak                     : Rp" << tunjanganAnak << endl;
+   cout << "Tambahan Gaji                      : Rp" << tambahanGaji << endl;
+   cout << "Potongan Gaji                      : Rp" << potonganGaji << endl;
+   cout << "Pajak                              : Rp" << pajak << endl;
+   cout << "Gaji Kotor                         : Rp" << gajiKotor << endl;
+   cout << "Gaji Bersih                        : Rp" << gajiBersih << endl;
 
    return 0;
 }
