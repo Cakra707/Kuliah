@@ -2,7 +2,7 @@
 #include <iomanip>
 using namespace std;
 
-double gajiBersih, gajiPokok = 3000000, tunjanganJabatan, tunjanganKeluarga, tunjanganAnak, tambahanGaji, potonganGaji, gajiKotor, pajak, tunjanganPendidikan;
+double gajiBersih, gajiPokok = 3000000, tunjanganJabatan = 0, tunjanganKeluarga = 0, tunjanganAnak = 0, tambahanGaji = 0, potonganGaji = 0, gajiKotor = 0, pajak = 0, tunjanganPendidikan = 0;
 int nik, jumlahJamKerja, jumlahAnak;
 string namaKaryawan, tingkatPendidikan, status;
 char kodeJabatan;
@@ -15,12 +15,10 @@ int main () {
     cout << "Kode Jabatan (S/T/B)               : "; cin >> kodeJabatan;
     cout << "Tingkat Pendidikan (SMA/D3/S1)     : "; cin >> tingkatPendidikan;
     cout << "Status Perkawinan (MENIKAH/BELUM)  : "; cin >> status;
-
     if (status == "MENIKAH") {
         cout << "Jumlah anak                        : "; cin >> jumlahAnak;
         tunjanganKeluarga = 0.1 * gajiPokok;
     }
-
     cout << "Jumlah Jam Kerja                   : "; cin >> jumlahJamKerja;
     
     switch (kodeJabatan) {
@@ -54,7 +52,7 @@ int main () {
    cout << "\n" <<endl;
    cout << setw(34) <<"HASIL PERHITUNGAN GAJI" <<endl <<endl;
 
-   cout << fixed << setprecision(2);
+   cout << fixed << setprecision(2); 
    cout << "Gaji Pokok                         : Rp" << setw(15) << gajiPokok << endl;
    cout << "Tunjangan Keluarga                 : Rp" << setw(15) << tunjanganKeluarga << endl;
    cout << "Tunjangan Jabatan                  : Rp" << setw(15) << tunjanganJabatan << endl;
@@ -62,8 +60,8 @@ int main () {
    cout << "Tunjangan Anak                     : Rp" << setw(15) << tunjanganAnak << endl;
    cout << "Tambahan Gaji                      : Rp" << setw(15) << tambahanGaji << endl;
    cout << "Potongan Gaji                      : Rp" << setw(15) << potonganGaji << endl;
-   cout << "Pajak                              : Rp" << setw(15) << pajak << endl;
    cout << "Gaji Kotor                         : Rp" << setw(15) << gajiKotor << endl;
+   cout << "Pajak                              : Rp" << setw(15) << pajak << endl;
    cout << "Gaji Bersih                        : Rp" << setw(15) << gajiBersih << endl;
 
    return 0;
