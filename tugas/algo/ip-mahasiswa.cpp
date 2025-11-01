@@ -17,29 +17,14 @@ int main () {
         cout << "Nama                       : "; cin.ignore(); getline(cin, nama);
         cout << "Kode (TI/SI/MI/RPL/BD/KWH) : "; cin >> kodeJrsn;
 
-         if (kodeJrsn == "TI") {
-            jurusan = "Teknik Informatika";
-            siswaTI++;
-         } else if (kodeJrsn == "SI") {
-             jurusan = "Sistem Informasi";
-             siswaSI++;
-         }  else if (kodeJrsn == "MI") {
-            jurusan = "Manajemen Informatika";
-            siswaMI++;
-         }  else if (kodeJrsn == "RPL") {
-             jurusan = "Rekayasa Perangkat Lunak";
-             siswaRPL++;
-         }  else if (kodeJrsn == "BD") {
-            jurusan = "Bisnis Digital";
-            siswaBD++;
-         } else if (kodeJrsn == "KWH") {
-            jurusan = "Kewirausahaan";
-            siswaKWH++;
-         } else {
-            cout << "\nMasukan kode yang sesuai!" << endl <<endl;
-            dataKe--;
-            continue;
-         }
+        if (kodeJrsn == "TI") {jurusan = "Teknik Informatika"; siswaTI++;} 
+        else if (kodeJrsn == "SI") {jurusan = "Sistem Informasi"; siswaSI++;}
+        else if (kodeJrsn == "MI") {jurusan = "Manajemen Informatika"; siswaMI++;}
+        else if (kodeJrsn == "RPL") {jurusan = "Rekayasa Perangkat Lunak"; siswaRPL++;}  
+        else if (kodeJrsn == "BD") {jurusan = "Bisnis Digital"; siswaBD++;} 
+        else if (kodeJrsn == "KWH") {jurusan = "Kewirausahaan"; siswaKWH++;} 
+        else {cout << "\nMasukan kode yang sesuai!" << endl <<endl; dataKe--; continue;}
+
         cout << setw(35) <<"Jurusan                    : " << jurusan << endl <<endl;
 
         totalBobotxSks = 0;
@@ -89,41 +74,24 @@ int main () {
             ip = totalBobotxSks / totalSks;
 
             cout << "Masih ada Matakuliah [y/t]  : "; cin >> masihMatkul;
-            if (masihMatkul != "y") break;
+            if (masihMatkul == "t") break;
 
         }
            
             cout << "\nJumlah matkul        : " << jumlahMatkul <<endl;
-            cout << "Index Prestasi       : " << ip <<endl <<endl;
+            cout << "Indeks Prestasi       : " << ip <<endl <<endl;
 
         if (jurusan == "Teknik Informatika") {
-            if (ip > maksIpTI) {
-                maksIpTI = ip;
-                noPokokTinggiTI = noPokok;
-                namaTinggiTI = nama;
-            }
-            if (ip < minIpTI) {
-                minIpTI = ip;
-                noPokokRendahTI = noPokok;
-                namaRendahTI = nama;
-            }
+            if (ip > maksIpTI) { maksIpTI = ip; noPokokTinggiTI = noPokok; namaTinggiTI = nama; }            if (ip < minIpTI) { minIpTI = ip; noPokokRendahTI = noPokok; namaRendahTI = nama; }
         } 
 
         if (jurusan == "Rekayasa Perangkat Lunak") {
-            if (ip > maksIpRPL) {
-                maksIpRPL = ip;
-                noPokokTinggiRPL = noPokok;
-                namaTinggiRPL = nama;
-            } 
-            if (ip < minIpRPL) {
-                minIpRPL = ip;
-                noPokokRendahRPL = noPokok;
-                namaRendahRPL = nama;
-            }
+            if (ip > maksIpRPL) { maksIpRPL = ip; noPokokTinggiRPL = noPokok; namaTinggiRPL = nama; } 
+            if (ip < minIpRPL) { minIpRPL = ip; noPokokRendahRPL = noPokok; namaRendahRPL = nama; }
         }
 
         cout << "Masih ada mahasiswa lain [y/t]: "; cin >> masihMahasiswa;
-        if (masihMahasiswa != "y") break;
+        if (masihMahasiswa == "t") break;
     }
 
     cout << "\nJumlah Mahasiswa TEKNIK INFORMATIKA        : " << siswaTI << endl;
