@@ -2,7 +2,7 @@
 #include <iomanip>
 using namespace std;
 
-double gajiBersih, gajiPokok = 3000000, tunjanganJabatan = 0, tunjanganKeluarga = 0, tunjanganAnak = 0, tambahanGaji = 0, potonganGaji = 0, gajiKotor = 0, pajak = 0, tunjanganPendidikan = 0;
+double gajiBersih = 0, gajiPokok = 3000000, tunjanganJabatan = 0, tunjanganKeluarga = 0, tunjanganAnak = 0, tambahanGaji = 0, potonganGaji = 0, gajiKotor = 0, pajak = 0, tunjanganPendidikan = 0;
 int nik, jumlahJamKerja, jumlahAnak;
 string namaKaryawan, tingkatPendidikan, status;
 char kodeJabatan;
