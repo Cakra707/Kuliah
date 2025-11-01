@@ -24,6 +24,9 @@ if (status == "MENIKAH") then
 	write ("Jumlah anak : ")
 	read(jumlahAnak)
 	tunjanganKeluarga < 0.1 * gajiPokok
+	if (jumlahAnak > 3) then jumlahAnak < 3
+	endif
+	tunjanganAnak < 0.05 *  gajiPokok * jumlahAnak;
 endif
 
 write ("Jumlah jam kerja	: ")
@@ -44,19 +47,19 @@ else if (tingkatPendidikan == "D3") then
                else write ("Masukan Tingkat Pendidikan Yang Sesuai!")
 endif 
 
-if (jumlahAnak > 3) then jumlahAnak < 3
-endif
+
 
 if (jumlahJamKerja > 200) then tambahanGaji < 0.05 * gajiPokok
     else potonganGaji < 0.05 * gajiPokok
 endif
+
 
 gajiKotor < (gajiPokok + tambahanGaji + tunjanganAnak + tunjanganJabatan + tunjanganKeluarga + tunjanganPendidikan) - potonganGaji
 
 if (gajiKotor > 3500000) then pajak < 0.025 * gajiKotor
 endif
 
-tunjanganAnak < 0.05 *  gajiPokok * jumlahAnak;
+
    gajiBersih < gajiKotor - pajak;
 
 write ("HASIL PERHITUNGAN GAJI") 
@@ -65,7 +68,7 @@ write ("HASIL PERHITUNGAN GAJI")
   write ("Gaji Pokok : Rp" , gajiPokok)
    write("Tunjangan Keluarga : Rp" , tunjanganKeluarga)
    write("Tunjangan Jabatan: Rp" , tunjanganJabatan)
-   write("Tunjangan pendidikan: Rp" , tunjanganPendidikan)
+   write("Tunjangan Pendidikan: Rp" , tunjanganPendidikan)
    write("Tunjangan Anak: Rp" , tunjanganAnak) 
    write("Tambahan Gaji : Rp" , tambahanGaji) 
     write("Potongan Gaji : Rp"  potonganGaji)

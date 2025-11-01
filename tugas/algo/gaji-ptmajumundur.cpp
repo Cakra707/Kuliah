@@ -18,6 +18,8 @@ int main () {
     if (status == "MENIKAH") {
         cout << "Jumlah anak                        : "; cin >> jumlahAnak;
         tunjanganKeluarga = 0.1 * gajiPokok;
+        if (jumlahAnak > 3 ) jumlahAnak = 3;
+        tunjanganAnak = 0.05 *  gajiPokok * jumlahAnak;
     }
     cout << "Jumlah Jam Kerja                   : "; cin >> jumlahJamKerja;
     
@@ -36,17 +38,16 @@ int main () {
           else if (tingkatPendidikan == "S1") tunjanganPendidikan = 0.15 * gajiPokok;
                else cout << "\nMasukan Tingkat Pendidikan Yang Sesuai!" <<endl;
    
-   if (jumlahAnak > 3 ) jumlahAnak = 3;
+   
    
    if (jumlahJamKerja > 200) tambahanGaji = 0.05 * gajiPokok;
     else potonganGaji = 0.05 * gajiPokok;
    
-
+    
     gajiKotor = (gajiPokok + tambahanGaji + tunjanganAnak + tunjanganJabatan + tunjanganKeluarga + tunjanganPendidikan) - potonganGaji;
 
     if (gajiKotor > 3500000) pajak = 0.025 * gajiKotor;
    
-   tunjanganAnak = 0.05 *  gajiPokok * jumlahAnak;
    gajiBersih = gajiKotor - pajak;
 
    cout << "\n" <<endl;
@@ -56,7 +57,7 @@ int main () {
    cout << "Gaji Pokok                         : Rp" << setw(15) << gajiPokok << endl;
    cout << "Tunjangan Keluarga                 : Rp" << setw(15) << tunjanganKeluarga << endl;
    cout << "Tunjangan Jabatan                  : Rp" << setw(15) << tunjanganJabatan << endl;
-   cout << "Tunjangan pendidikan               : Rp" << setw(15) << tunjanganPendidikan << endl;
+   cout << "Tunjangan Pendidikan               : Rp" << setw(15) << tunjanganPendidikan << endl;
    cout << "Tunjangan Anak                     : Rp" << setw(15) << tunjanganAnak << endl;
    cout << "Tambahan Gaji                      : Rp" << setw(15) << tambahanGaji << endl;
    cout << "Potongan Gaji                      : Rp" << setw(15) << potonganGaji << endl;
