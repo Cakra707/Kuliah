@@ -41,7 +41,8 @@ int main () {
    
    
    if (jumlahJamKerja > 200) tambahanGaji = 0.05 * gajiPokok;
-    else potonganGaji = 0.05 * gajiPokok;
+    else if (jumlahJamKerja < 200) potonganGaji = 0.05 * gajiPokok;
+    
    
     
     gajiKotor = (gajiPokok + tambahanGaji + tunjanganAnak + tunjanganJabatan + tunjanganKeluarga + tunjanganPendidikan) - potonganGaji;
