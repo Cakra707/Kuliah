@@ -13,12 +13,13 @@ int main() {
     cout << "Masukan Bunga Pinjaman per tahun: "; cin >> bunga;
     cout << "Berapa tahun akan dipinjam: "; cin >> lama;
 
+    bunga /= 100;
     bunga /= 12;
     n = lama * 12;
     cicilan = (modal * bunga * pow((bunga+1),n) ) / (pow((bunga+1),n) - 1);
 
     cout << fixed << setprecision(2);
-    cout << "Pembayaran cicilan setiap bulan = Rp " << cicilan << endl;
+    cout << "\nPembayaran cicilan setiap bulan = Rp " << cicilan << endl;
     cout << "Tahun, Bulan, ModalTerbayar, Bungaterbayar" << endl;
 
     for (thn = 1; thn<=lama; thn++) {
@@ -30,7 +31,7 @@ int main() {
             modalBulanan = cicilan - bungaBulanan;
             bungaTahunan += bungaBulanan;
             modalTahunan += modalBulanan;
-            cout << thn <<"\t" << bln << "\t" << modalBulanan << "\t" << bungaBulanan << endl;
+            cout <<"\n" << thn <<"\t" << bln << "\t" << modalBulanan << "\t" << bungaBulanan << endl;
             modal -= modalBulanan;
         }
 
