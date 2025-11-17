@@ -39,7 +39,6 @@ int main () {
                else cout << "\nMasukan Tingkat Pendidikan Yang Sesuai!" <<endl;
    
    
-   
    if (jumlahJamKerja > 200) tambahanGaji = 0.05 * gajiPokok;
     else if (jumlahJamKerja < 200) potonganGaji = 0.05 * gajiPokok;
     

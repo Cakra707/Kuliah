@@ -15,7 +15,7 @@ int main () {
         cout << "Masukan Data Ke "<< dataKe << " : " << endl;
         cout << "No. Pokok                  : "; cin >> noPokok;
         cout << "Nama                       : "; cin.ignore(); getline(cin, nama);
-        cout << "Kode (TI/SI/MI/RPL/BD/KWH) : "; cin >> kodeJrsn;
+        cout << "Kode (TI/SI/MI/RPL/BD/KWH) : "; cin >> kodeJrsn; 
 
         if (kodeJrsn == "TI") {jurusan = "Teknik Informatika"; siswaTI++;} 
         else if (kodeJrsn == "SI") {jurusan = "Sistem Informasi"; siswaSI++;}
@@ -58,7 +58,7 @@ int main () {
             cout << "Bobot               : " << bobot << endl;
             bobotxSks = bobot * sks;
 
-            cout << "Bobot x SKS         : " << bobotxSks << endl;
+            cout << "Bobot × SKS         : " << bobotxSks << endl;
             
             totalSks += sks;
             totalBobotxSks += bobotxSks;
@@ -82,7 +82,8 @@ int main () {
             cout << "Indeks Prestasi       : " << ip <<endl <<endl;
 
         if (jurusan == "Teknik Informatika") {
-            if (ip > maksIpTI) { maksIpTI = ip; noPokokTinggiTI = noPokok; namaTinggiTI = nama; }            if (ip < minIpTI) { minIpTI = ip; noPokokRendahTI = noPokok; namaRendahTI = nama; }
+            if (ip > maksIpTI) { maksIpTI = ip; noPokokTinggiTI = noPokok; namaTinggiTI = nama; }            
+            if (ip < minIpTI) { minIpTI = ip; noPokokRendahTI = noPokok; namaRendahTI = nama; }
         } 
 
         if (jurusan == "Rekayasa Perangkat Lunak") {
