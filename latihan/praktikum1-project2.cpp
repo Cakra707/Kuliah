@@ -4,7 +4,7 @@ using namespace std;
 
 
 int main() {
-    string nama, nim, alamat;
+    string nama, nim, alamat, r = "ayam";
 
 int umur, thnlahir;
 cout << "Masukkan NIM Anda: "; getline(cin,nim);

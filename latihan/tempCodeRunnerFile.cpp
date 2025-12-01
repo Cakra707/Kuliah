@@ -1,1 +1,2 @@
-setiosflags(ios :: right)
+
+    Cetak_Larik(N,A);
