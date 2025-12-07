@@ -1,0 +1,1 @@
+cin.ignore(); getline(cin, nama[i]);
