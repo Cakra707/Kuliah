@@ -59,9 +59,6 @@ void Geser_Kanan(int M, int A[]) {
 
 }
     
-
-
-
 void Geser_Kiri(int M, int A[]) {
     int indeks, temp;
     temp = A[0];

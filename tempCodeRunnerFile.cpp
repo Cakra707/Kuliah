@@ -1,1 +1,0 @@
-seratusRb, limaPuluhRb, duaPuluhRb, sepuluhRb, limaRb, duaRb, satuRb, limaRatusRp, duaRatusRp, seratusRp;

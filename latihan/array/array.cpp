@@ -16,18 +16,9 @@ int main() {
     
   }
 
- 
-
-  while (c < 7) {
-    cout << "inde " << ars[c] << endl;
+  while (c < 5) {
+    cout << "indez " << ars[c] << endl;
     c++;
     
   }
-
-   
-
-  
-  
-   
-
 }
